@@ -1,0 +1,124 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+.logo-title {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select,
+.logo-title {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --font-family-primary: "Merriweather Sans", sans-serif;
+  --font-family-accent: "Open Sans", sans-serif;
+
+  --color-primary-background: #ffffff;
+  --color-complimentary-one-background: #d1bdf7;
+
+  --color-primary-font: #000036;
+  --color-secondary-font: #ffffff;
+
+  --color-border-one: #1a45df;
+  --color-border-two: #f06543;
+
+  --color-button-background: #1a45df;
+  --color-button-background-hover: #12309c;
+  --color-button-border: #ff703d;
+
+  --color-links: #1a45df;
+
+  --font-size-sm: clamp(0.5rem, 0.5rem + 1.5vw, 2rem);
+  --font-size-100: 0.775rem;
+  --font-size-200: 0.875rem;
+  --font-size-300: 1rem;
+  --font-size-400: 1.125rem;
+  --font-size-500: 1.25rem;
+  --font-size-600: 1.5rem;
+  --font-size-700: 1.875rem;
+  --font-size-xl: clamp(2rem, 1rem + 3vw, 5.75rem);
+
+  --select-border: #777;
+  --select-focus: #1a45df;
+  --select-arrow: var(--select-border);
+}
+
+body {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-400);
+  line-height: 1.6;
+  color: var(--color-primary-font);
+  background-color: var(--color-primary-background);
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+header {
+  grid-row: 1 / 2;
+  background: var(--color-complimentary-one-background);
+  padding: 2vw;
+  text-align: center;
+}
+
+main {
+  grid-row: 2 / 3;
+  padding: 2vw;
+}
+
+footer {
+  grid-row: 3 / 4;
+  background: var(--color-complimentary-one-background);
+  text-align: center;
+}
