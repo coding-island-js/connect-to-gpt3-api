@@ -108,17 +108,26 @@ body {
 header {
   grid-row: 1 / 2;
   background: var(--color-complimentary-one-background);
-  padding: 2vw;
+  padding-block: 2vw;
   text-align: center;
 }
 
 main {
   grid-row: 2 / 3;
-  padding: 2vw;
+  display: grid;
+  place-items: center;
 }
 
 footer {
   grid-row: 3 / 4;
   background: var(--color-complimentary-one-background);
   text-align: center;
+  padding-block: 2vw;
+}
+
+.card {
+  background: var(--color-complimentary-one-background);
+  width: 80vw;
+  border-radius: 8px;
+  padding: 2vw;
 }
